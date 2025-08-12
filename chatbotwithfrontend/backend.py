@@ -20,7 +20,7 @@ graph=StateGraph(chatsate)
 graph.add_node("chat_node", chat_node)
 graph.add_edge(START, "chat_node")
 graph.add_edge("chat_node", END)
-chatbot=graph.compile()
+chatbot=graph.compile(checkpointer=checkpointer)
 # thread_id="1"
 # while True:
 #     user_input = input("type your message: ")
